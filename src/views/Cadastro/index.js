@@ -1,9 +1,10 @@
 import React from 'react';
+import './style.css';
 
 export default function Cadastro() {
   return (
     <>
-      <div>Pagina Home</div>
+      <div>Pagina Cadastro</div>
     </>
   );
 }
