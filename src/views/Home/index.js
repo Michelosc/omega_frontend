@@ -4,7 +4,9 @@ import './style.css';
 export default function Home() {
   return (
     <>
-      <div>Pagina Home</div>
+      <div>
+        <h1>Pagina Home</h1>
+      </div>
     </>
   );
 }
