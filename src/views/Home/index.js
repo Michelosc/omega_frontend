@@ -4,7 +4,7 @@ import './style.css';
 export default function Home() {
   return (
     <>
-      <div>
+      <div class="teste">
         <h1>Pagina Home</h1>
       </div>
     </>

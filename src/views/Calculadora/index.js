@@ -1,10 +1,12 @@
 import React from 'react';
+import './style.css';
 
 export default function Calculadora() {
   return (
-    <div class="container">
-      <div>teste</div>
-      <div>teste2</div>
+    <div class="box">
+      <div class="card">
+        <h1>ola</h1>
+      </div>
     </div>
   );
 }
