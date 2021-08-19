@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Home from '../views/Home';
 import Cadastro from '../views/Cadastro';
-import Calculadora from '../views/Calculadora';
+import Proposta from '../views/Proposta'
 
 export default function Routes() {
   return (
@@ -11,7 +11,7 @@ export default function Routes() {
       <Route path="/" exact component={Home} />
       <Route path="/cadastro" component={Cadastro} />
       <Route path="/editar/:id" component={Cadastro} />
-      <Route path="/calculadora" component={Calculadora} />
+      <Route path="/Proposta" component={Proposta} />
     </Switch>
   );
 }

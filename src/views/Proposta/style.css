@@ -1,0 +1,111 @@
+.box1 {
+    display: flex;
+    height: 100vh;
+    background-color: #e5e5e5;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1 {
+    position: relative;
+    height: 90%;
+    max-width: 1200;
+    width: 100%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    background-color: #fff;
+}
+
+.main{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    margin-top: 5%;
+    margin-left: 27%;
+    width: 45%;
+    height: 50%;
+
+    background-color: #C9CED6;
+    border-radius: 9px;
+}
+
+.testar{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 27rem;
+    
+    margin: 0.5% 0 5% 0px;
+
+    font-size: 0.7rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+  
+
+}
+
+.total{
+    font-size: 1rem;
+    margin: 30px 0 0 40px
+}
+
+.calculo{
+    margin: 3% 0 3% 18%;
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+.botoes{
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 10px 0 50px 200px;
+    
+    
+   
+
+}
+
+.voltar{
+    width: 130px;
+    height: 45px;
+    margin: 0 15px 0 0;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #50565f;
+    border: #fff 1px solid;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+   
+}
+.contratar{
+    width: 130px;
+    height: 45px;
+    margin: 0 15px 0 0;
+    border-radius: 8px;
+    background-color: #17253F;
+    color: #fff;
+    border: #17253F 1px solid;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.contratar:hover{
+    background-color: rgb(111, 219, 111);
+    transition:ease-in-out 0.5s ;
+    border: none;
+    color: black;
+    
+}
+.voltar:hover{
+    background-color: rgb(238, 119, 119);
+    transition:ease-in-out 0.5s ;
+    border: none;
+    color: white;
+}

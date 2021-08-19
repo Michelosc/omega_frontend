@@ -1,9 +1,7 @@
 import React from 'react';
-import './reset.css';
-import ReactDOM from 'react-dom';
+import './index.css';
 import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'react-toastify/dist/ReactToastify.css';
+import ReactDOM from 'react-dom'
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,13 +1,9 @@
 import React from 'react';
-import Routes from './routes';
-import { BrowserRouter } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
+import Proposta from './views/Proposta'
+
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes />
-      <ToastContainer />
-    </BrowserRouter>
-  );
+    <Proposta/>
+  )
 }

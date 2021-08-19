@@ -1,0 +1,17 @@
+.logout{
+  display: flex;
+  margin-top: 40%;
+  padding: 0;
+  margin-left: 25px;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  
+
+    /* background-color: red; */
+}
+
+a{
+    text-decoration: none;
+    color: #17253F;
+}

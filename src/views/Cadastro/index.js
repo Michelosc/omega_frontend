@@ -4,9 +4,7 @@ import './style.css';
 export default function Cadastro() {
   return (
     <>
-      <div>
-        <h1>Pagina Cadastro</h1>
-      </div>
+      <div>Pagina Cadastro</div>
     </>
   );
 }
