@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Omega Tech Grupo 1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Front-end de um aplicativo de contratação de energia elétrica criado por Roberto Neves, Michel Corrêa, Aurelianny Cunha, Vitor Moraes e Ícaro de Almeida. Desafio final do programa Omega Tech, da Omega Energia e Gama Academy. O projeto utiliza React no front-end e NodeJS no back-end.
 
-## Available Scripts
+## Começando
 
-In the project directory, you can run:
+Para rodar esse projeto, é preciso instalar o npm e executar os comandos:
+```
+npm i
+```
+e
+```
+npm start
+```
 
-### `npm start`
+## Fluxo do site
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para realizar o contrato de compra da energia elétrica, nosso usuário segue os seguintes passos:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Ao entrar no site, o usuário vê a tela de login e pode escolher entrar no sistema ou fazer um novo cadastro.
+- Ao realizar o cadastro, ele informa seu nome, email e senha e retorna ao login.
+- Devidamente logado, ele vê a tela home, onde escolhe ver as propostas já cadastradas ou criar uma nova.
+- Para criar uma nova proposta, ele informa as datas de início e fim do contrato, as carga a serem contratadas, a fonte de energia (convencional ou renovável), o submercado (norte, nordeste, sul ou sudeste) e pode então ir para a tela de confirmação.
+- Na confirmação, ele vê o consumo total e o valor da proposta. Confirmando a contratação, ele é direcionado à tela de propostas, onde são mostradas tanto as propostas que foram contratadas quanto as que não foram.
 
-### `npm test`
+## Processo de criação do código
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As telas foram divididas entre os alunos em dois campos: as telas de login e cadastro com Roberto e Aurelianny e o sistema de contratação com Vitor e Ícaro. Michel auxiliou os dois campos, considerando que estava responsável pelo back-end.
 
-### `npm run build`
+As telas e o sistema de contratação foram inspirados no sistema real da Omega Energia, que funciona, no nível básico, principalmente através de botões, e tem uma interface bastante simples e intuitiva. Pegamos dicas com Hélio Costa, tech lead da Omega que foi nosso mentor nesse projeto, e tentamos aplicar ideias e tecnologias apresentadas pelo professor Filipe Alencar.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Embora tenhamos inclusive começado o front-end antes das aulas, as obrigações diárias tornaram o desenolvimento mais lento do que o esperado. O projeto foi finalizado no dia da apresentação, de forma inteiramente colaborativa.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Autores
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Roberto Neves, Michel Corrêa, Aurelianny Cunha, Vitor Moraes e Ícaro de Almeida.
