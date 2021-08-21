@@ -1,8 +1,21 @@
 import React from 'react';
+import { useState } from 'react';
 import logo from '../../assets/omega-logo.png';
 import './style.css';
 
 export default function Calculadora() {
+  const [periodo, setPeriodo] = useState('');
+
+  const object = {
+    ...periodo,
+  };
+
+  function submit(e) {
+    console.log(e);
+  }
+
+  function handleSubmit() {}
+
   return (
     <div className="box">
       <div className="card">
@@ -13,26 +26,64 @@ export default function Calculadora() {
         <div className="container-body">
           <div className="colOne">
             <h6 className="titleColOne">Vamos fazer uma cotação?</h6>
-            <form className="containerInput">
+            <form onSubmit={handleSubmit} className="containerInput">
               <label className="legendOfData" htmlFor="data">
                 Escolha um período
               </label>
-              <input className="input-data" type="text" name="data" />
+              <input
+                className="input-data"
+                type="text"
+                name="data"
+                required
+                value={periodo}
+                onChange={({ target }) => setPeriodo(target.value)}
+                type="text"
+              />
               <label className="legendOfData" htmlFor="data">
                 Escolha o submercado
               </label>
               <div className="container-buttons">
-                <button className="style-button">N</button>
-                <button className="style-button">NE</button>
-                <button className="style-button">S</button>
-                <button className="style-button">SE</button>
+                <button
+                  onClick={({ target }) => submit(target.value)}
+                  className="style-button"
+                >
+                  N
+                </button>
+                <button
+                  onClick={({ target }) => submit(target.value)}
+                  className="style-button"
+                >
+                  NE
+                </button>
+                <button
+                  onClick={({ target }) => submit(target.value)}
+                  className="style-button"
+                >
+                  S
+                </button>
+                <button
+                  onClick={({ target }) => submit(target.value)}
+                  className="style-button"
+                >
+                  SE
+                </button>
               </div>
               <label className="type-energy" htmlFor="type-energy">
                 Qual o tipo de energia deseja contratar ?
               </label>
               <div className="container-buttons-energy">
-                <button className="button-type-energy">CONV</button>
-                <button className="button-type-energy">RENOV</button>
+                <button
+                  onClick={({ target }) => submit(target.value)}
+                  className="button-type-energy"
+                >
+                  CONV
+                </button>
+                <button
+                  onClick={({ target }) => submit(target.value)}
+                  className="button-type-energy"
+                >
+                  RENOV
+                </button>
               </div>
               <label className="type-energy" htmlFor="">
                 Adicionar Carga
