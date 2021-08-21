@@ -14,8 +14,30 @@ export default function Calculadora() {
           <div className="colOne">
             <h6 className="titleColOne">Vamos fazer uma cotação?</h6>
             <form className="containerInput">
-              <input className="teste" type="text" />
-              <div className="teste2">ola</div>
+              <label className="legendOfData" htmlFor="data">
+                Escolha um período
+              </label>
+              <input className="input-data" type="text" name="data" />
+              <label className="legendOfData" htmlFor="data">
+                Escolha o submercado
+              </label>
+              <div className="container-buttons">
+                <button className="style-button">N</button>
+                <button className="style-button">NE</button>
+                <button className="style-button">S</button>
+                <button className="style-button">SE</button>
+              </div>
+              <label className="type-energy" htmlFor="type-energy">
+                Qual o tipo de energia deseja contratar ?
+              </label>
+              <div className="container-buttons-energy">
+                <button className="button-type-energy">CONV</button>
+                <button className="button-type-energy">RENOV</button>
+              </div>
+              <label className="type-energy" htmlFor="">
+                Adicionar Carga
+              </label>
+              <input type="text" />
             </form>
           </div>
           <div className="colTwo">ola teste dois</div>
