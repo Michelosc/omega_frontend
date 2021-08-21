@@ -44,3 +44,16 @@
   border-radius: 15px;
   background-color: #e16f1c;
 }
+.titleColOne {
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.container-input {
+  align-self: stretch;
+  border: 1px solid black;
+}
+.input {
+  display: flex;
+  justify-content: center;
+}
