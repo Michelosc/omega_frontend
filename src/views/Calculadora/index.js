@@ -4,13 +4,16 @@ import logo from '../../assets/omega-logo.png';
 import './style.css';
 
 export default function Calculadora() {
-  const [periodo, setPeriodo] = useState('');
+  const [periodoinicial, setPeriodoInicial] = useState('');
+  const [periodoFinal, setPeriodoFinal] = useState('');
 
   function submit(e) {
     console.log(e);
   }
 
-  function handleSubmit() {}
+  function handleSubmit(e) {
+    console.log(periodoFinal, periodoinicial);
+  }
 
   return (
     <div className="box">
@@ -24,17 +27,30 @@ export default function Calculadora() {
             <h6 className="titleColOne">Vamos fazer uma cotação?</h6>
             <form onSubmit={handleSubmit} className="containerInput">
               <label className="legendOfData" htmlFor="data">
-                Escolha um período
+                Escolha o período inicial
               </label>
               <input
                 className="input-data"
                 type="text"
                 name="data"
                 required
-                value={periodo}
-                onChange={({ target }) => setPeriodo(target.value)}
+                value={periodoinicial}
+                onChange={({ target }) => setPeriodoInicial(target.value)}
                 type="text"
               />
+              <label className="legendOfData" htmlFor="data">
+                Escolha o período final
+              </label>
+              <input
+                className="input-data"
+                type="text"
+                name="data"
+                required
+                value={periodoFinal}
+                onChange={({ target }) => setPeriodoFinal(target.value)}
+                type="text"
+              />
+              <button className="button-enviar">enviar</button>
               <label className="legendOfData" htmlFor="data">
                 Escolha o submercado
               </label>
