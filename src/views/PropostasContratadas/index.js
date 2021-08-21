@@ -10,11 +10,11 @@ export default function PropostasContratadas() {
   const [contratos, setContratos] = useState([]);
 
   useEffect(() => {
-    const url = 'https://omega-tech.herokuapp.com/';
+    const url = 'https://omega-tech.herokuapp.com/propostas';
 
     api.get(url).then((r) => {
-      console.log(r);
-      setContratos(r);
+      console.log(r.data);
+      setContratos(r.data);
     });
   }, []);
 
@@ -30,24 +30,26 @@ export default function PropostasContratadas() {
           <main className="propostasListadas">
             {contratos?.map((contrato) => {
               return (
-                <article key={contrato.id} className="clienteProposta">
+                <article key={contrato.idPublico} className="clienteProposta">
                   <div className="propostaCard">
-                    <h1>Porposta {contrato.id} </h1>
+                    <h1>Porposta </h1>
                   </div>
                   <div className="cargaCard">
-                    <p>Carga: {} </p>
+                    <p>Carga: {contrato.cargas.consumoKwh} </p>
                   </div>
                   <div className="submercadoCard">
-                    <p>Submercado: {} </p>
+                    <p>Submercado: {contrato.submercado} </p>
                   </div>
                   <div className="fonteCard">
-                    <p>Fonte: {} </p>
+                    <p>Fonte: {contrato.fonteDeEnergia} </p>
                   </div>
                   <div className="periodoCard">
-                    <p>Período: {} </p>
+                    <p>
+                      Período: {contrato.dataInicio} - {contrato.dataFim}{' '}
+                    </p>
                   </div>
                   <div className="valorCard">
-                    <p>Valor: {} </p>
+                    <p>Valor: {contrato.valorDaProposta} </p>
                   </div>
                 </article>
               );

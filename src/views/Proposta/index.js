@@ -12,8 +12,8 @@ function Proposta(props) {
 
   useEffect(() => {
     api.get(url, getOptions()).then((r) => {
-      console.log(r);
-      setProposta(r);
+      console.log(r.data);
+      setProposta(r.data);
     });
   }, []);
 
@@ -21,8 +21,13 @@ function Proposta(props) {
     console.log('voltou');
   }
 
-  function next() {
-    console.log('Seguiu');
+  function next(cliente) {
+    const contratado = { contratado: true };
+    api.patch(`${url}/${cliente.idPublico}`, contratado, {
+      headers: {
+        authorization: proposta,
+      },
+    });
   }
 
   return (
@@ -33,43 +38,45 @@ function Proposta(props) {
           <main className="main">
             {proposta?.map((cliente) => {
               return (
-                <article key={cliente.id} className="clienteProposta">
-                  <p>Cargas/consumo: -------------------- {}</p>
+                <article key={cliente.idPublico} className="clienteProposta">
                   <p>
-                    Período: --------------------------- {} - {}
+                    Cargas/consumo: --------------------{' '}
+                    {cliente.cargas.consumo}
                   </p>
-                  <p>Submercado: ------------------------ {}</p>
-                  <p>Fonte: ----------------------------- {}</p>
+                  <p>
+                    Período: --------------------------- {cliente.dataInicio} -{' '}
+                    {cliente.dataFim}
+                  </p>
+                  <p>
+                    Submercado: ------------------------ {cliente.submercado}
+                  </p>
+                  <p>
+                    Fonte: -----------------------------{' '}
+                    {cliente.fonteDeEnergia}
+                  </p>
                   <p>Preço kwh: ------------------------- 10</p>
                   <p>PreçoKhw * Submercado * Fonte * Período * Cargas </p>
                   <span className="total">total: </span>
-                  <span className="calculo">{}</span>
+                  <span className="calculo">R$ {cliente.valorDaProposta}</span>
+                  <div className="botoes">
+                    <Link to="/Calculadora">
+                      <button onClick={back} className="voltar" type="button">
+                        Voltar
+                      </button>
+                    </Link>
+                    <Link to="/PropostasContratadas">
+                      <button
+                        onClick={() => next(cliente)}
+                        className="contratar"
+                        type="button"
+                      >
+                        Contratar
+                      </button>
+                    </Link>
+                  </div>
                 </article>
               );
             })}
-            {/* <div className="testar">
-                  <p>Cargas/consumo: --------------------------------- #</p>
-                      <p>Período: -------------------------------------------- #</p>
-                      <p>Submercado: -------------------------------------- #</p>
-                      <p>Fonte: ---------------------------------------------- #</p>
-                      <p>Preço kwh: ---------------------------------------- 10</p>
-                      <p>PreçoKhw * Submercado * Fonte * Período * Cargas </p>
-                      <span className='total'>total: </span>
-                      <span className='calculo'>1.209.600,00</span>
-                      </div>  */}
-
-            <div className="botoes">
-              <Link to="/Calculadora">
-                <button onClick={back} className="voltar" type="button">
-                  Voltar
-                </button>
-              </Link>
-              <Link to="/PropostasContratadas">
-                <button onClick={next} className="contratar" type="button">
-                  Contratar
-                </button>
-              </Link>
-            </div>
           </main>
         </div>
       </div>
