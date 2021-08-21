@@ -7,9 +7,11 @@ Front-end de um aplicativo de contratação de energia elétrica criado por Robe
 Para rodar esse projeto, é preciso instalar o npm e executar os comandos:
 ```
 npm i
+```
 e
 ```
 npm start
+```
 
 ## Fluxo do site
 
