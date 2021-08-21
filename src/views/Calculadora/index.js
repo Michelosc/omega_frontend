@@ -7,12 +7,13 @@ export default function Calculadora() {
   const [periodoinicial, setPeriodoInicial] = useState('');
   const [periodoFinal, setPeriodoFinal] = useState('');
 
-  function submit(e) {
-    console.log(e);
-  }
+  const proposta = {
+    ...periodoinicial,
+    ...periodoFinal,
+  };
 
-  function handleSubmit(e) {
-    console.log(periodoFinal, periodoinicial);
+  function handleClickState(e) {
+    console.log(e.target.value);
   }
 
   return (
@@ -25,7 +26,7 @@ export default function Calculadora() {
         <div className="container-body">
           <div className="colOne">
             <h6 className="titleColOne">Vamos fazer uma cotação?</h6>
-            <form onSubmit={handleSubmit} className="containerInput">
+            <form className="containerInput">
               <label className="legendOfData" htmlFor="data">
                 Escolha o período inicial
               </label>
@@ -54,11 +55,19 @@ export default function Calculadora() {
               <label className="legendOfData" htmlFor="data">
                 Escolha o submercado
               </label>
-              <div className="container-buttons">
-                <button className="style-button">N</button>
-                <button className="style-button">NE</button>
-                <button className="style-button">S</button>
-                <button className="style-button">SE</button>
+              <div className="container-buttons" onClick={handleClickState}>
+                <button className="style-button" value={'NORTE'}>
+                  N
+                </button>
+                <button className="style-button" value={'NORDESTE'}>
+                  NE
+                </button>
+                <button className="style-button" value={'SUL'}>
+                  S
+                </button>
+                <button className="style-button" value={'SUDESTE'}>
+                  SE
+                </button>
               </div>
               <label className="type-energy" htmlFor="type-energy">
                 Qual o tipo de energia deseja contratar ?
