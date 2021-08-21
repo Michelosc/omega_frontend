@@ -27,7 +27,7 @@ const Cadastro = () => {
       })
       .then((res) => {
         console.log(res.data);
-        history.push('/login');
+        history.push('/');
       })
       .catch((err) => {
         messageError = err.response.data.message;
