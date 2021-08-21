@@ -6,10 +6,6 @@ import './style.css';
 export default function Calculadora() {
   const [periodo, setPeriodo] = useState('');
 
-  const object = {
-    ...periodo,
-  };
-
   function submit(e) {
     console.log(e);
   }
@@ -43,47 +39,17 @@ export default function Calculadora() {
                 Escolha o submercado
               </label>
               <div className="container-buttons">
-                <button
-                  onClick={({ target }) => submit(target.value)}
-                  className="style-button"
-                >
-                  N
-                </button>
-                <button
-                  onClick={({ target }) => submit(target.value)}
-                  className="style-button"
-                >
-                  NE
-                </button>
-                <button
-                  onClick={({ target }) => submit(target.value)}
-                  className="style-button"
-                >
-                  S
-                </button>
-                <button
-                  onClick={({ target }) => submit(target.value)}
-                  className="style-button"
-                >
-                  SE
-                </button>
+                <button className="style-button">N</button>
+                <button className="style-button">NE</button>
+                <button className="style-button">S</button>
+                <button className="style-button">SE</button>
               </div>
               <label className="type-energy" htmlFor="type-energy">
                 Qual o tipo de energia deseja contratar ?
               </label>
               <div className="container-buttons-energy">
-                <button
-                  onClick={({ target }) => submit(target.value)}
-                  className="button-type-energy"
-                >
-                  CONV
-                </button>
-                <button
-                  onClick={({ target }) => submit(target.value)}
-                  className="button-type-energy"
-                >
-                  RENOV
-                </button>
+                <button className="button-type-energy">CONV</button>
+                <button className="button-type-energy">RENOV</button>
               </div>
               <label className="type-energy" htmlFor="">
                 Adicionar Carga

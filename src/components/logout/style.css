@@ -1,0 +1,23 @@
+.logout {
+  display: flex;
+  margin-top: 36%;
+  padding: 0;
+  margin-left: 25px;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+
+  /* background-color: red; */
+}
+
+.btnLogout {
+  text-decoration: none;
+  color: #17253f;
+}
+
+@media (max-width: 1200px) {
+  .logout {
+    font-size: 15px;
+    margin-top: 5%;
+  }
+}
