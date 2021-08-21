@@ -15,6 +15,9 @@ export default function Calculadora() {
   function handleClickState(e) {
     console.log(e.target.value);
   }
+  function handleSubmitEnergy(e) {
+    console.log(e.target.value);
+  }
 
   return (
     <div className="box">
@@ -72,9 +75,16 @@ export default function Calculadora() {
               <label className="type-energy" htmlFor="type-energy">
                 Qual o tipo de energia deseja contratar ?
               </label>
-              <div className="container-buttons-energy">
-                <button className="button-type-energy">CONV</button>
-                <button className="button-type-energy">RENOV</button>
+              <div
+                className="container-buttons-energy"
+                onClick={handleSubmitEnergy}
+              >
+                <button className="button-type-energy" value="CONVENCIONAL">
+                  CONV
+                </button>
+                <button className="button-type-energy" value="RENOVAVEL">
+                  RENOV
+                </button>
               </div>
               <label className="type-energy" htmlFor="">
                 Adicionar Carga
