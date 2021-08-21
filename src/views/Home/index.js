@@ -18,7 +18,7 @@ export default function Home() {
           <main className='iniciarProposta'>
             
             <div className="proposta">
-              <p className='textoProposta'> Vamos iniciar uma proposta ?</p>
+              <p className='textoProposta'> Vamos fazer uma proposta ?</p>
               <div className='btnIniciar'>
               <button onClick={iniciar} className='iniciar' type="button">iniciar</button>
               </div>
