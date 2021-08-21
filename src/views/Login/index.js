@@ -40,6 +40,7 @@ const Login = () => {
   }
 
   function redirecionar(e) {
+    e.preventDefault();
     history.push('/cadastro');
   }
 
