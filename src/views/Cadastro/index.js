@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
-import axios from 'axios';
-import img_esq from '../../assets/cadastro.jpg'
-import omega from '../../assets/logo-omega-energia.png'
-import './style.css'
+import React, { useState } from 'react';
+import api from '../../services/api.js';
+import img_esq from '../../assets/cadastro.jpg';
+import omega from '../../assets/logo-omega-energia.png';
+import './style.css';
 import { useHistory } from 'react-router';
-
+import { toast } from 'react-toastify';
 
 const Cadastro = () => {
 
-  const url = "http://localhost:3000";
+  const url = "https://omega-tech.herokuapp.com/users";
   let history = useHistory();
+  let messageError = "";
 
   const [data, setData] = useState({
     nome: "",
@@ -17,9 +18,9 @@ const Cadastro = () => {
     senha: ""
   })
 
-  function submit(e){
+  async function submit(e){
     e.preventDefault();
-    axios.post(url, {
+    await api.post(url, {
       nome: data.nome,
       email: data.email,
       senha: data.senha
@@ -28,7 +29,13 @@ const Cadastro = () => {
       console.log(res.data);
       history.push("/login");
     })
-    .catch(err =>{console.log(err)})
+    .catch(err =>{
+      messageError = err.response.data.message;
+      console.log(messageError)
+    })
+    for(var i = 0; i < messageError.length; i++){
+      toast.error(messageError[i]);
+    }
   }
 
   function handle(e){
