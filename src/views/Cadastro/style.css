@@ -10,14 +10,13 @@
     color: #A6ABB5;
 }
 .cadastro-img-left img{
-    width: 689px;
+    height: 100vh;
 }
 .cadastro-direita {
     width: 591px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*justify-content: center;*/
     color: #50565F;
     border-radius: 5px;
 }

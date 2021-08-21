@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-import logo from '../../assets/cadastro.jpg'
+import img_esq from '../../assets/cadastro.jpg'
 import omega from '../../assets/logo-omega-energia.png'
 import './style.css'
+import { useHistory } from 'react-router';
 
 
 const Cadastro = () => {
 
-  const url = "";
+  const url = "http://localhost:3000";
+  let history = useHistory();
 
   const [data, setData] = useState({
     nome: "",
@@ -23,8 +25,10 @@ const Cadastro = () => {
       senha: data.senha
     })
     .then(res =>{
-      console.log(res.data)
+      console.log(res.data);
+      history.push("/login");
     })
+    .catch(err =>{console.log(err)})
   }
 
   function handle(e){
@@ -37,7 +41,7 @@ const Cadastro = () => {
   return (
     <div className="cadastro">
       <div className="cadastro-img-left" >
-        <img src={logo} alt="imagem de página de cadastro" />
+        <img src={img_esq} alt="imagem de página de cadastro" />
       </div>
 
       <div className="cadastro-direita">
