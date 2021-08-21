@@ -37,7 +37,7 @@ export default function Calculadora() {
               <label className="type-energy" htmlFor="">
                 Adicionar Carga
               </label>
-              <input type="text" />
+              <input className="input-data" type="text" />
             </form>
           </div>
           <div className="colTwo">
