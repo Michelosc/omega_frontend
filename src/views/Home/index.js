@@ -2,11 +2,15 @@ import React from 'react';
 import Header from '../components/header'
 import Logout from '../components/Logout';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 
 export default function Home() {
 
   function iniciar () {
+    console.log('iniciando')
+  }
+  function verPropostas () {
     console.log('iniciando')
   }
   return (
@@ -19,8 +23,9 @@ export default function Home() {
             
             <div className="proposta">
               <p className='textoProposta'> Vamos fazer uma proposta ?</p>
-              <div className='btnIniciar'>
-              <button onClick={iniciar} className='iniciar' type="button">iniciar</button>
+              <div className='btnHome'>
+              <Link to="/PropostasContratadas"><button onClick={verPropostas} className='verPropostas' type="button">Contratos</button></Link>
+              <Link to="/Calculadora"><button onClick={iniciar} className='iniciar' type="button">iniciar</button></Link>
               </div>
             </div> 
           </main>  

@@ -1,15 +1,14 @@
 import React from 'react';
-import Proposta from './views/Proposta'
-import Home from './views/Home'
-import PropostasContratadas from './views/PropostasContratadas'
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes'
 
 
 export default function App() {
   return (
     <>
-      <PropostasContratadas/>
-      <Home/>
-      <Proposta/>
+      <BrowserRouter>
+        <Routes/>
+      </BrowserRouter>
     </>
   )
 }

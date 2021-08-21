@@ -3,12 +3,14 @@ import './style.css';
 import Header from '../components/header'
 import { Fragment, useState, useEffect } from 'react';
 import api from '../../services/api'
+import { Link } from 'react-router-dom'
 
 function Proposta(props) {
   // const[proposta, setProposta] = useState([])
+  // const url = "https://omega-tech.herokuapp.com/"
 
   // useEffect(() => {
-  //   api.get('#')
+  //   api.get(url)
   //   .then((r) => {setProposta(r)})
   //   console.log('#')
   // }, []);
@@ -58,8 +60,8 @@ function Proposta(props) {
                       </div> 
            
                   <div className='botoes'>
-                    <button onClick={back} className='voltar' type="button">Voltar</button>
-                    <button onClick={next} className='contratar' type="button">Contratar</button>
+                   <Link to="/Calculadora"><button onClick={back} className='voltar' type="button">Voltar</button></Link>
+                    <Link to="/PropostasContratadas"><button onClick={next} className='contratar' type="button">Contratar</button></Link>
                   </div>
               </main>
             </div>

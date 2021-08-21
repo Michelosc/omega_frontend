@@ -51,7 +51,7 @@
     margin-left: 3rem;
 }
 
-.btnIniciar{
+.btnHome{
     padding: 0;
     display: flex;
     justify-content: flex-end;
@@ -71,4 +71,46 @@
     border: #17253F 1px solid;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
+}
+.verPropostas{
+    width: 130px;
+    height: 45px;
+    margin: 0 15px 0 0;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #17253F;
+    border: #fff 1px solid;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+@media(max-width: 1024px) {
+    .Bv{
+        display: none;
+    }
+    .iniciarProposta{
+        width: 90%;
+        margin-top: 5rem;
+        margin-left: 1rem;
+    }
+    .textoProposta{
+        font-size: 1rem;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        margin:auto;
+    }
+    .btnHome{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+    .verPropostas{
+        width: 5rem;
+        font-size: 0.8rem;
+    }
+    .iniciar{
+        width: 5rem;
+        font-size: 0.8rem;
+    }
 }

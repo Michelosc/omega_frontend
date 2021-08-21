@@ -49,6 +49,21 @@
 
 }
 
+.testar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 27rem;
+    
+    margin: 0.5% 0 5% 0px;
+
+    font-size: 0.7rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+
+}
+
 .total{
     font-size: 1rem;
     margin: 30px 0 0 40px
@@ -104,4 +119,41 @@
     transition:ease-in-out 0.5s ;
     border: none;
     color: white;
+}
+
+@media(max-width: 1200px) {
+
+    .main{
+        width: 92%;
+        margin-top: 15%;
+        margin-left: 0.8rem;
+        
+    }
+    
+
+    .testar{
+        font-size: 0.4rem;
+        margin: 2% 0 0 14rem;
+
+    }
+    .total{
+        font-size: 0.6rem;
+    }
+    .calculo{
+        font-size: 0.8rem;
+    }
+    .botoes{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-right: 10rem;
+    }
+    .voltar{
+        width: 5rem;
+        font-size: 0.8rem;
+    }
+    .contratar{
+        width: 5rem;
+        font-size: 0.8rem;
+    }
 }
