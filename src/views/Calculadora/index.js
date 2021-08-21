@@ -13,9 +13,10 @@ export default function Calculadora() {
         <div className="container-body">
           <div className="colOne">
             <h6 className="titleColOne">Vamos fazer uma cotação?</h6>
-            <div clasName="container-input">
-              <input className="input" type="text" />
-            </div>
+            <form className="containerInput">
+              <input className="teste" type="text" />
+              <div className="teste2">ola</div>
+            </form>
           </div>
           <div className="colTwo">ola teste dois</div>
         </div>
