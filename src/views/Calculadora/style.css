@@ -85,3 +85,11 @@
 .button-type-energy {
   margin-right: 3px;
 }
+.colTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-colTwo {
+  color: white;
+}

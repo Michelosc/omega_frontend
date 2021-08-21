@@ -40,7 +40,9 @@ export default function Calculadora() {
               <input type="text" />
             </form>
           </div>
-          <div className="colTwo">ola teste dois</div>
+          <div className="colTwo">
+            <h1 className="title-colTwo">Inicie sua proposta</h1>
+          </div>
         </div>
       </div>
     </div>
