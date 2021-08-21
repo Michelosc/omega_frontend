@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import api from '../../services/api.js';
-import img_esq from '../../assets/cadastro.jpg';
-import omega from '../../assets/omega-logo.png';
-import './style.css';
-import { useHistory } from 'react-router';
-import { toast } from 'react-toastify';
+import React, { useState } from "react";
+import api from "../../services/api.js";
+import img_esq from "../../assets/cadastro.jpg";
+import omega from "../../assets/omega-logo.png";
+import "./style.css";
+import { useHistory } from "react-router";
+import { toast } from "react-toastify";
 
 const Cadastro = () => {
-  const url = 'https://omega-tech.herokuapp.com/users';
+  const url = "https://omega-tech.herokuapp.com/users";
   let history = useHistory();
-  let messageError = '';
+  let messageError = "";
 
   const [data, setData] = useState({
-    nome: '',
-    email: '',
-    senha: '',
+    nome: "",
+    email: "",
+    senha: "",
   });
 
   async function submit(e) {
@@ -27,13 +27,13 @@ const Cadastro = () => {
       })
       .then((res) => {
         console.log(res.data);
-        history.push('/login');
+        history.push("/");
       })
       .catch((err) => {
         messageError = err.response.data.message;
         console.log(messageError);
       });
-    toast.error('Seu cadastro contém campos inválidos. Confira.');
+    toast.error("Seu cadastro contém campos inválidos. Confira.");
   }
 
   function handle(e) {
